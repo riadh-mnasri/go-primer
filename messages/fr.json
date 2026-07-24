@@ -1,0 +1,47 @@
+{
+  "site": {
+    "name": "GoPrimer",
+    "tagline": "Apprendre Go, pas à pas."
+  },
+  "nav": {
+    "home": "Accueil",
+    "modules": "Modules"
+  },
+  "language": {
+    "label": "Langue",
+    "fr": "Français",
+    "en": "English"
+  },
+  "home": {
+    "heroTitle": "Apprends Go depuis zéro",
+    "heroSubtitle": "Un parcours clair et progressif pour découvrir le langage Go : syntaxe, concepts et bonnes pratiques, expliqués simplement.",
+    "heroCta": "Commencer le module 1",
+    "progressTitle": "Ta progression",
+    "progressEmpty": "Tu n'as pas encore commencé. Lance-toi sur la première leçon !",
+    "modulesTitle": "Modules du parcours"
+  },
+  "module": {
+    "lessonsCount": "{count, plural, one {# leçon} other {# leçons}}",
+    "statusAvailable": "Disponible",
+    "statusPlanned": "Bientôt disponible",
+    "backToModules": "Retour aux modules",
+    "startModule": "Commencer",
+    "continueModule": "Continuer",
+    "reviewModule": "Revoir"
+  },
+  "lesson": {
+    "backToModule": "Retour au module",
+    "markDone": "Marquer comme terminée",
+    "markNotDone": "Marquer comme non terminée",
+    "completed": "Leçon terminée",
+    "exerciseTitle": "À toi de jouer",
+    "revealSolution": "Voir la solution",
+    "hideSolution": "Masquer la solution",
+    "prevLesson": "Leçon précédente",
+    "nextLesson": "Leçon suivante",
+    "nextModule": "Module suivant"
+  },
+  "footer": {
+    "copyright": "© {year} Riadh MNASRI"
+  }
+}

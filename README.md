@@ -1,36 +1,54 @@
-This is a [Next.js](https://nextjs.org) project bootstrapped with [`create-next-app`](https://nextjs.org/docs/app/api-reference/cli/create-next-app).
+# GoPrimer
 
-## Getting Started
+Application web pédagogique pour apprendre le langage Go depuis zéro : parcours progressif par modules et leçons, exemples de code commentés, exercices avec indice et solution, suivi de progression. Interface bilingue français / anglais.
 
-First, run the development server:
+*Read this in English: [README.en.md](README.en.md)*
+
+## Stack
+
+- [Next.js 16](https://nextjs.org) (App Router, Turbopack)
+- TypeScript
+- Tailwind CSS 4
+- [next-intl](https://next-intl.dev) pour l'internationalisation (`app/[locale]`)
+
+## Démarrage
 
 ```bash
+npm install
 npm run dev
-# or
-yarn dev
-# or
-pnpm dev
-# or
-bun dev
 ```
 
-Open [http://localhost:3000](http://localhost:3000) with your browser to see the result.
+L'application est disponible sur [http://localhost:3131](http://localhost:3131) (redirection automatique vers `/fr`).
 
-You can start editing the page by modifying `app/page.tsx`. The page auto-updates as you edit the file.
+## Structure du contenu
 
-This project uses [`next/font`](https://nextjs.org/docs/app/building-your-application/optimizing/fonts) to automatically optimize and load [Geist](https://vercel.com/font), a new font family for Vercel.
+Le contenu pédagogique est séparé du moteur d'affichage, dans `src/content/` :
 
-## Learn More
+- `src/content/types.ts` : types du curriculum (module, leçon, section, exercice), avec des champs bilingues `{ fr, en }`.
+- `src/content/modules/*.ts` : un module = un fichier, contenant ses leçons.
+- `src/content/curriculum.ts` : assemble les modules et expose les fonctions de navigation (module suivant, leçon suivante...).
 
-To learn more about Next.js, take a look at the following resources:
+Les modules déjà rédigés (statut `available`) : Prise en main, Syntaxe de base, Structures de contrôle. Les modules suivants existent en métadonnées seules (statut `planned`) et seront étoffés au fil des prochaines itérations : Fonctions, Tableaux/slices/maps, Structs et méthodes, Interfaces, Gestion des erreurs, Pointeurs, Paquets et modules, Goroutines et channels, Tests, Go idiomatique.
 
-- [Next.js Documentation](https://nextjs.org/docs) - learn about Next.js features and API.
-- [Learn Next.js](https://nextjs.org/learn) - an interactive Next.js tutorial.
+## Progression
 
-You can check out [the Next.js GitHub repository](https://github.com/vercel/next.js) - your feedback and contributions are welcome!
+La progression (leçons marquées comme terminées) est stockée dans le `localStorage` du navigateur, sans compte ni backend.
 
-## Deploy on Vercel
+## Variables d'environnement
 
-The easiest way to deploy your Next.js app is to use the [Vercel Platform](https://vercel.com/new?utm_medium=default-template&filter=next.js&utm_source=create-next-app&utm_campaign=create-next-app-readme) from the creators of Next.js.
+Aucune variable d'environnement n'est nécessaire pour le développement local.
 
-Check out our [Next.js deployment documentation](https://nextjs.org/docs/app/building-your-application/deploying) for more details.
+## Tests
+
+```bash
+npm run lint
+npx tsc --noEmit
+```
+
+## Déploiement
+
+Déployé sur [Vercel](https://vercel.com). Chaque push sur `main` déclenche un déploiement de production.
+
+## Licence
+
+© 2026 Riadh MNASRI

@@ -1,26 +1,69 @@
 @import "tailwindcss";
 
 :root {
-  --background: #ffffff;
-  --foreground: #171717;
-}
-
-@theme inline {
-  --color-background: var(--background);
-  --color-foreground: var(--foreground);
-  --font-sans: var(--font-geist-sans);
-  --font-mono: var(--font-geist-mono);
+  --background: #faf6ee;
+  --surface: #ffffff;
+  --surface-muted: #f1ece0;
+  --foreground: #1c2422;
+  --foreground-muted: #5b6864;
+  --border: #e2dac8;
+  --accent: #0c7f96;
+  --accent-foreground: #ffffff;
+  --amber: #b8781c;
+  --amber-soft: #f4e3c6;
+  --code-bg: #16211f;
+  --code-fg: #dce7e2;
+  --code-keyword: #5fd0e8;
+  --code-string: #e8b463;
+  --code-comment: #7c9088;
+  --code-number: #d98a8a;
+  --code-func: #8fd1a8;
 }
 
 @media (prefers-color-scheme: dark) {
   :root {
-    --background: #0a0a0a;
-    --foreground: #ededed;
+    --background: #10171a;
+    --surface: #17201f;
+    --surface-muted: #1c2624;
+    --foreground: #ecf2ee;
+    --foreground-muted: #9aacA5;
+    --border: #2a3634;
+    --accent: #2fc2df;
+    --accent-foreground: #08181b;
+    --amber: #e5a34a;
+    --amber-soft: #3a2e1c;
+    --code-bg: #0d1513;
+    --code-fg: #dce7e2;
+    --code-keyword: #5fd0e8;
+    --code-string: #e8b463;
+    --code-comment: #6c8078;
+    --code-number: #d98a8a;
+    --code-func: #8fd1a8;
   }
+}
+
+@theme inline {
+  --color-background: var(--background);
+  --color-surface: var(--surface);
+  --color-surface-muted: var(--surface-muted);
+  --color-foreground: var(--foreground);
+  --color-foreground-muted: var(--foreground-muted);
+  --color-border: var(--border);
+  --color-accent: var(--accent);
+  --color-accent-foreground: var(--accent-foreground);
+  --color-amber: var(--amber);
+  --color-amber-soft: var(--amber-soft);
+  --font-sans: var(--font-geist-sans);
+  --font-mono: var(--font-geist-mono);
 }
 
 body {
   background: var(--background);
   color: var(--foreground);
-  font-family: Arial, Helvetica, sans-serif;
+  font-family: var(--font-sans), Arial, Helvetica, sans-serif;
+}
+
+::selection {
+  background: var(--accent);
+  color: var(--accent-foreground);
 }

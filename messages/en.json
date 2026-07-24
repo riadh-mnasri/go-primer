@@ -1,0 +1,47 @@
+{
+  "site": {
+    "name": "GoPrimer",
+    "tagline": "Learn Go, step by step."
+  },
+  "nav": {
+    "home": "Home",
+    "modules": "Modules"
+  },
+  "language": {
+    "label": "Language",
+    "fr": "Français",
+    "en": "English"
+  },
+  "home": {
+    "heroTitle": "Learn Go from scratch",
+    "heroSubtitle": "A clear, progressive path through the Go language: syntax, concepts, and good practices, explained simply.",
+    "heroCta": "Start module 1",
+    "progressTitle": "Your progress",
+    "progressEmpty": "You haven't started yet. Jump into the first lesson!",
+    "modulesTitle": "Course modules"
+  },
+  "module": {
+    "lessonsCount": "{count, plural, one {# lesson} other {# lessons}}",
+    "statusAvailable": "Available",
+    "statusPlanned": "Coming soon",
+    "backToModules": "Back to modules",
+    "startModule": "Start",
+    "continueModule": "Continue",
+    "reviewModule": "Review"
+  },
+  "lesson": {
+    "backToModule": "Back to module",
+    "markDone": "Mark as done",
+    "markNotDone": "Mark as not done",
+    "completed": "Lesson completed",
+    "exerciseTitle": "Your turn",
+    "revealSolution": "Show solution",
+    "hideSolution": "Hide solution",
+    "prevLesson": "Previous lesson",
+    "nextLesson": "Next lesson",
+    "nextModule": "Next module"
+  },
+  "footer": {
+    "copyright": "© {year} Riadh MNASRI"
+  }
+}
