@@ -42,6 +42,6 @@
     "nextModule": "Module suivant"
   },
   "footer": {
-    "copyright": "© {year} Riadh MNASRI"
+    "copyright": "© {year} <a>Riadh MNASRI</a>"
   }
 }
